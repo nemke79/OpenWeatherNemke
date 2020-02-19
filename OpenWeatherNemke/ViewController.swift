@@ -20,6 +20,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var arrayOfPinsNames = [String]()
     
+    var arrayOfAnotations = [MKAnnotation]()
+    
     private var currentLocation: CLLocation?
     
     let myPin = MKPointAnnotation()
@@ -81,6 +83,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         annotation.coordinate = touchMapCoordinate
         mapView.addAnnotation(annotation)
         
+        arrayOfAnotations.append(annotation)
+        
         let location = CLLocation(latitude: annotation.coordinate.latitude, longitude: annotation.coordinate.longitude)
         
         let geocoder = CLGeocoder()
@@ -117,6 +121,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            mapView.removeAnnotation(arrayOfAnotations[indexPath.row])
+            arrayOfAnotations.remove(at: indexPath.row)
             arrayOfPinsNames.remove(at: indexPath.row)
             arrayOfPinsCLLocations.remove(at: indexPath.row)
             citiesTableView.deleteRows(at: [indexPath], with: .fade)
@@ -219,6 +225,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 myPin.coordinate = userLocation.coordinate
                 
                 mapView.addAnnotation(myPin)
+                
+                arrayOfAnotations.append(myPin)
                 
                 let location = CLLocation(latitude: myPin.coordinate.latitude, longitude: myPin.coordinate.longitude)
                 
