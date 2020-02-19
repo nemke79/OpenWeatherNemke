@@ -30,11 +30,11 @@ class WeatherInfoViewController: UIViewController {
         }
         
         if let cityTemperatureText = temperatureText {
-            temperature.text = cityTemperatureText
+            temperature.text = "Temperature: \(cityTemperatureText)"
         }
         
         if let cityHumidityText = humidityText {
-            humidity.text = cityHumidityText
+            humidity.text = "Humidity: \(cityHumidityText)"
         }
         
         if let cityRainChancesText = rainChancesText {
@@ -42,7 +42,7 @@ class WeatherInfoViewController: UIViewController {
         }
         
         if let cityWindText = windText {
-            wind.text = cityWindText
+            wind.text = "Wind: \(cityWindText)"
         }
     }
 }
