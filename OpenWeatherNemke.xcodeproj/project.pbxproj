@@ -13,6 +13,7 @@
 		DF97C37E23FC300800A91CED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF97C37C23FC300800A91CED /* Main.storyboard */; };
 		DF97C38023FC300D00A91CED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF97C37F23FC300D00A91CED /* Assets.xcassets */; };
 		DF97C38323FC300D00A91CED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF97C38123FC300D00A91CED /* LaunchScreen.storyboard */; };
+		DF97C38B23FC6D4A00A91CED /* WeatherInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97C38A23FC6D4A00A91CED /* WeatherInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DF97C37F23FC300D00A91CED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF97C38223FC300D00A91CED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF97C38423FC300D00A91CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF97C38A23FC6D4A00A91CED /* WeatherInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				DF97C37823FC300800A91CED /* SceneDelegate.swift */,
 				DF97C37A23FC300800A91CED /* ViewController.swift */,
 				DF97C37C23FC300800A91CED /* Main.storyboard */,
+				DF97C38A23FC6D4A00A91CED /* WeatherInfoViewController.swift */,
 				DF97C37F23FC300D00A91CED /* Assets.xcassets */,
 				DF97C38123FC300D00A91CED /* LaunchScreen.storyboard */,
 				DF97C38423FC300D00A91CED /* Info.plist */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF97C37B23FC300800A91CED /* ViewController.swift in Sources */,
+				DF97C38B23FC6D4A00A91CED /* WeatherInfoViewController.swift in Sources */,
 				DF97C37723FC300800A91CED /* AppDelegate.swift in Sources */,
 				DF97C37923FC300800A91CED /* SceneDelegate.swift in Sources */,
 			);
