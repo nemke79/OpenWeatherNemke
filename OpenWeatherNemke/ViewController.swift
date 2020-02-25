@@ -14,8 +14,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     let locationManager = CLLocationManager()
     
-    //    var dictOfPins = [CLLocation: String]()
-    
     var arrayOfPinsCLLocations = [CLLocation]()
     
     var arrayOfPinsNames = [String]()
@@ -94,7 +92,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 print("Unable to Reverse Geocode Location (\(error))")
             } else {
                 if let placemarks = placemarks, let placemark = placemarks.first {
-                    self.arrayOfPinsNames.append(placemark.locality ?? placemark.country ?? placemark.ocean!)
+                    self.arrayOfPinsNames.append("\(placemark.locality ?? placemark.name ?? placemark.country ?? placemark.ocean ?? "Unknown location") \(placemark.country ?? "")")
                     self.arrayOfPinsCLLocations.append(placemark.location!)
                     
                     self.citiesTableView.reloadData()
@@ -238,7 +236,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     } else {
                         if let placemarks = placemarks, let placemark = placemarks.first {
                             
-                            self.arrayOfPinsNames.append(placemark.locality ?? placemark.country ?? placemark.ocean!)
+                            self.arrayOfPinsNames.append("\(placemark.locality ?? placemark.name ?? placemark.country ?? placemark.ocean ?? "Unknown location") \(placemark.country ?? "")")
                             self.arrayOfPinsCLLocations.append(placemark.location!)
                             self.citiesTableView.reloadData()
                             
