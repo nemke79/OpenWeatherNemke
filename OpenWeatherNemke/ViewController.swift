@@ -34,6 +34,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var humidity = String()
     
+    // Adding outlet for map
     @IBOutlet weak var mapView: MKMapView! {
         didSet {
             let tgr = UITapGestureRecognizer(target: self, action: #selector(self.tapGestureHandler))
